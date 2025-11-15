@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="hangman.WinController"
+      alignment="CENTER" spacing="14" prefWidth="480" prefHeight="260">
+    <children>
+        <Label text="Congratulations! You Won!" style="-fx-font-size: 22px;"/>
+        <HBox spacing="10" alignment="CENTER">
+            <Button text="Play Again" onAction="#onPlayAgain" prefWidth="120"/>
+            <Button text="Exit" onAction="#onExit" prefWidth="120"/>
+        </HBox>
+    </children>
+</VBox>

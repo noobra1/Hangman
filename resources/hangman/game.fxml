@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="hangman.GameController"
+            prefWidth="720" prefHeight="520">
+
+    <!-- Top title -->
+    <top>
+        <HBox alignment="CENTER">
+            <children>
+                <Label text="Hangman">
+                    <font><Font size="26"/></font>
+                </Label>
+            </children>
+            <padding><Insets top="12" right="12" bottom="12" left="12"/></padding>
+        </HBox>
+    </top>
+
+    <!-- Center: word + image -->
+    <center>
+        <VBox alignment="CENTER" spacing="16">
+            <children>
+                <Label fx:id="wordLabel" text="_ _ _ _ _">
+                    <font><Font size="32"/></font>
+                </Label>
+
+                <ImageView fx:id="hangImage" fitWidth="260" fitHeight="260" preserveRatio="true"/>
+            </children>
+        </VBox>
+    </center>
+
+    <!-- Bottom: keyboard + reset -->
+    <bottom>
+        <VBox spacing="10">
+            <children>
+                <FlowPane hgap="6" vgap="6" alignment="CENTER">
+                    <padding><Insets top="8" right="8" bottom="0" left="8"/></padding>
+
+                    <!-- A–Z buttons (all call the same handler) -->
+                    <Button text="A" onAction="#onLetter"/><Button text="B" onAction="#onLetter"/>
+                    <Button text="C" onAction="#onLetter"/><Button text="D" onAction="#onLetter"/>
+                    <Button text="E" onAction="#onLetter"/><Button text="F" onAction="#onLetter"/>
+                    <Button text="G" onAction="#onLetter"/><Button text="H" onAction="#onLetter"/>
+                    <Button text="I" onAction="#onLetter"/><Button text="J" onAction="#onLetter"/>
+                    <Button text="K" onAction="#onLetter"/><Button text="L" onAction="#onLetter"/>
+                    <Button text="M" onAction="#onLetter"/><Button text="N" onAction="#onLetter"/>
+                    <Button text="O" onAction="#onLetter"/><Button text="P" onAction="#onLetter"/>
+                    <Button text="Q" onAction="#onLetter"/><Button text="R" onAction="#onLetter"/>
+                    <Button text="S" onAction="#onLetter"/><Button text="T" onAction="#onLetter"/>
+                    <Button text="U" onAction="#onLetter"/><Button text="V" onAction="#onLetter"/>
+                    <Button text="W" onAction="#onLetter"/><Button text="X" onAction="#onLetter"/>
+                    <Button text="Y" onAction="#onLetter"/><Button text="Z" onAction="#onLetter"/>
+                </FlowPane>
+
+                <HBox alignment="CENTER">
+                    <children>
+                        <Button text="Reset" onAction="#onReset" prefWidth="120"/>
+                    </children>
+                    <padding><Insets bottom="12"/></padding>
+                </HBox>
+            </children>
+        </VBox>
+    </bottom>
+</BorderPane>

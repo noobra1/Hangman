@@ -1,0 +1,15 @@
+apple
+banana
+orange
+grape
+mango
+computer
+java
+keyboard
+mouse
+screen
+hangman
+puzzle
+game
+school
+university

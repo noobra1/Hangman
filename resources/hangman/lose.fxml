@@ -1,0 +1,23 @@
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="hangman.LoseController"
+      alignment="CENTER" spacing="14" prefWidth="480" prefHeight="260">
+    <padding><Insets top="20" right="20" bottom="20" left="20"/></padding>
+    <children>
+        <Label text="Try Again! The word was:">
+            <font><Font size="22"/></font>
+        </Label>
+        <Label fx:id="answerLabel">
+            <font><Font size="18"/></font>
+        </Label>
+        <HBox spacing="10" alignment="CENTER">
+            <Button text="Play Again" onAction="#onPlayAgain" prefWidth="120"/>
+            <Button text="Exit" onAction="#onExit" prefWidth="120"/>
+        </HBox>
+    </children>
+</VBox>
